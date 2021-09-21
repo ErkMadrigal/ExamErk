@@ -585,6 +585,16 @@
 
     }
 
+    const limpiarCampos = () => {
+        ingreso.value = ''; 
+        nivel.value = ''; 
+        ocupacion.value = ''; 
+        direccion.value = ''; 
+        telefono.value = ''; 
+        correo.value = ''; 
+        nombre.value = ''; 
+    }
+
     const localListaDataUsr = listarDataUsr => localStorage.setItem("dataUsr", JSON.stringify(listarDataUsr))
 
     const agregarList = (ingreso, nivel, ocupacion, direccion, telefono, correo, nombre) => {
@@ -619,6 +629,7 @@
                 listarDataUsr.push(data);
                 localListaDataUsr(listarDataUsr);
                 ListaUsr();
+                limpiarCampos()
                 Swal.fire(
                 'Agregado!',
                 'agregado Satisfactoriamente.',
@@ -769,6 +780,9 @@
         fetchAPI(url, "POST", dataForm)
         .then((data) => {
             if(data.estatus === 'ok'){
+                dataTableServior();
+                localStorage.clear();
+                dataTableLocal();
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
@@ -776,8 +790,6 @@
                     showConfirmButton: false,
                     timer: 1500
                 })
-                localStorage.clear();
-                dataTableLocal();
             }
         })
         .catch((e) => console.error(e));
