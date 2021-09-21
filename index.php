@@ -194,7 +194,7 @@
     <div id="resultadoPreguntas" class="container mt-5">
         <h1>Resultado de las Encuestas Local</h1>
         <button class="btn btn-primary" id="btngraficaLocal"> Ver Grafica</button>
-        <table class="table table-borderless table-hover table-light mt-5">
+        <table class="table table-borderless table-hover table-light table-responsive mt-5">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -216,7 +216,7 @@
         <br>
         <h1>Resultado de las Encuestas Servidor</h1>
         <button class="btn btn-primary" id="btngraficaServidor"> Ver Grafica</button>
-        <table class="table table-borderless table-hover table-light mt-5">
+        <table class="table table-borderless table-hover table-light table-responsive mt-5">
             <thead>
                 <tr>
                     <th scope="col">#</th>
