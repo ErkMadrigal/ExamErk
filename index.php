@@ -552,12 +552,12 @@
             .then((dataRes) => {
                 total += (dataRes['total'].mensaje[0].cantidadUsr);
 
-                prim += (dataRes['prim'].mensaje[0].cantidadUsr)*total;
-                sec += (dataRes['sec'].mensaje[0].cantidadUsr)*total;
-                pre += (dataRes['pre'].mensaje[0].cantidadUsr)*total;
-                lic += (dataRes['lic'].mensaje[0].cantidadUsr)*total;
-                mae += (dataRes['mae'].mensaje[0].cantidadUsr)*total;
-                doc += (dataRes['doc'].mensaje[0].cantidadUsr)*total;
+                prim += 16761208/(dataRes['prim'].mensaje[0].cantidadUsr);
+                sec += 16761208/(dataRes['sec'].mensaje[0].cantidadUsr);
+                pre += 16761208/(dataRes['pre'].mensaje[0].cantidadUsr);
+                lic += 16761208/(dataRes['lic'].mensaje[0].cantidadUsr);
+                mae += 16761208/(dataRes['mae'].mensaje[0].cantidadUsr);
+                doc += 16761208/(dataRes['doc'].mensaje[0].cantidadUsr);
                 
                 let totalG = 16761208;
                 var chart = anychart.pie([
